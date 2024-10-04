@@ -14,4 +14,4 @@ router.post("/resend-email-verification", authenticateToken, csrfProtection, che
 router.post("/resend-pwd-setup-link", authenticateToken, csrfProtection, checkApiAccess, authController.handleResendPwdSetupLink);
 router.post("/reset-pwd", authenticateToken, csrfProtection, checkApiAccess, authController.handlePwdReset);
 
-module.exports = { authRoutes: router };
+module.exports = { authRoutes: router }; 

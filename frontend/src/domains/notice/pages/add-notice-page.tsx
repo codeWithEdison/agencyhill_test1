@@ -17,6 +17,7 @@ import { NoticeForm } from '../components';
 const initialState: NoticeFormProps = {
   title: '',
   content: '',
+  description: '',
   status: 0,
   recipientType: 'EV',
   recipientRole: 0,
@@ -33,7 +34,7 @@ export const AddNotice = () => {
     resolver: zodResolver(NoticeFormSchema)
   });
 
-  const onSaveNotice = async (data: NoticeFormProps) => {
+  const   onSaveNotice = async (data: NoticeFormProps) => {
     try {
       const result = await addNotice(data).unwrap();
       toast.info(result.message);
